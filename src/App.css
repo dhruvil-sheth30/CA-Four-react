@@ -1,0 +1,140 @@
+@import url("https://fonts.googleapis.com/css2?family=Caveat+Brush&family=Caveat:wght@700&family=Pacifico&family=Poppins&family=Satisfy&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Poppins&family=Reem+Kufi+Fun:wght@600&family=Roboto:wght@500&display=swap');
+body {
+  margin: 0;
+  padding: 0;
+  overflow: auto;
+}
+
+.header {
+  display: flex;
+  text-align: center;
+  justify-content: space-between;
+}
+
+/* Button style for changing the mode */
+.mode-icon{
+    margin-top: 5px;
+    height: 70px;
+    width: 70px;
+    margin-right: 7px
+}
+
+.logo{
+    color: #bf2c2c;
+    font-family: "Alfa Slab One";
+    font-size: 79px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: normal;
+    margin-bottom: 30px;
+    margin-top: 3px;
+    margin-left: 7px;
+}
+
+.App {
+  text-align: center;
+  padding: 10px;
+  height: 100vh;
+}
+
+/* style for question box */
+.question-box {
+    border-radius: 15px;
+    background: #B1D9DE;
+    width: 60vw;
+    height: 73vh;
+    margin-left: 18%;
+    padding: 10px;
+    box-shadow: 2px 2px;
+    padding-left: 30px;
+    padding-right: 30px;
+    background-color: B1D9DE;
+}
+
+.question-text {
+    color: #000;
+    font-family: Poppins;
+    font-size: 42px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
+
+.options {
+    border-radius: 20px;
+    background: #c1bcbc;
+    color: #000;
+    font-family: "Reem Kufi Fun";
+    font-size: 34px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+}
+
+.options:hover {
+  background-color: rgb(160, 213, 170);
+  box-shadow: 1px 1px;
+}
+
+.question-counter{
+    color: rgba(0, 0, 0, 0.60);
+    font-family: Poppins;
+    font-size: 28px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+}
+/* Button styles */
+button {
+  font-size: 15px;
+  padding: 10px;
+  border-radius: 15px;
+  cursor: pointer;
+}
+
+.highlight {
+    color: #000;
+    font-family: "Reem Kufi Fun";
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+}
+
+.remove {
+  margin-left: 40px;
+}
+
+.score {
+  font-size: 30px;
+}
+
+.final-score {
+  font-size: 40px;
+  margin-top: 60px;
+  color: rgb(9, 65, 170);
+}
+
+/* style for result */
+.results {
+  border: 1px solid rgb(148, 148, 148);
+  border-radius: 10px;
+  width: 30vw;
+  height: 40vh;
+  margin-left: 33%;
+  margin-top: 5%;
+  padding: 10px;
+  box-shadow: 2px 2px;
+  padding-left: 30px;
+  padding-right: 30px;
+  background-color: rgb(69, 208, 255);
+}
+
+.score{
+    font-size: 40px;
+}
+
+.restart-btn {
+  background-color: rgb(255, 215, 255);
+}
