@@ -2,19 +2,20 @@ import React, { useContext } from "react";
 import { MyQuizGame } from "../App";
 import "../App.css";
 
-function GameResult() {
-  // Using the useContext hook
+// Functional component for displaying game results
+function GameResult({ Light }) {
+  // Using the useContext hook to access shared state and functions
   const { setQuestionNumber, setFinalScore, answer, setAnswer } =
     useContext(MyQuizGame);
 
-  // Function to restart the game by using useState
+  // Function to restart the game by resetting state
   const restartGame = () => {
     setAnswer([]);
     setQuestionNumber(0);
     setFinalScore(0);
   };
 
-  // Defining the logic for calculating the answers using for of loop
+  // Logic for calculating the number of correct answers
   let correctAns = 0;
   for (const item of answer) {
     if (item.isCorrect) {
@@ -22,7 +23,7 @@ function GameResult() {
     }
   }
 
-  // Greeting based on the user's score
+  // Greeting message based on the user's score
   let greeting = "";
   if (correctAns === 10) {
     greeting = "Perfect! You nailed it!";
@@ -35,14 +36,22 @@ function GameResult() {
   }
 
   return (
-    <div className="results">
+    <div className={`results ${Light ? "light-theme" : "dark-theme"}`}>
+      {/* Display the final results */}
       <h2 className="final-score">Final Results</h2>
+      
+      {/* Display the user's score and percentage */}
       <p className="score">
-        {/* Logic for calculating the score percentage  */}
         {correctAns} out of 10 correct - {correctAns * 10}%
       </p>
+      
+      {/* Horizontal divider */}
       <hr className="divider" />
+      
+      {/* Display a personalized greeting based on the user's score */}
       <p className="greeting">{greeting}</p>
+      
+      {/* Button to restart the game */}
       <button className="restart-btn" onClick={restartGame}>
         Play Again
       </button>

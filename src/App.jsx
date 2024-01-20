@@ -8,10 +8,12 @@ import darkIcon from "./assets/dark-icon.png";
 import lightModeImage from "./assets/light-mode.png";
 import darkModeImage from "./assets/dark-mode.png";
 
-// Creating a context
+// Creating a context to share state and functions among components
 export const MyQuizGame = createContext();
 
+// Main App component
 function App() {
+  // State variables using the useState hook
   const [mode, setMode] = useState("Light");
   const [Light, setLight] = useState(true);
   const [questionNumber, setQuestionNumber] = useState(0);
@@ -20,6 +22,7 @@ function App() {
   const [finalScore, setFinalScore] = useState(0);
   const [highlightQuestion, setHighlightQuestion] = useState(false);
 
+  // Creating a context value object to pass to the provider
   const contextValue = {
     setAnswer,
     setFinalScore,
@@ -36,22 +39,27 @@ function App() {
     answer,
   };
 
+  // Function to handle button click and toggle between Light and Dark mode
   const handleClick = () => {
     setLight(!Light);
   };
 
+  // Effect to update the mode based on the Light state
   useEffect(() => {
     setMode(Light ? "Dark" : "Light");
   }, [Light]);
 
+  // Style object for background image
   const backgroundImageStyle = {
     background: `url(${Light ? lightModeImage : darkModeImage}), lightgray 10% / cover no-repeat`,
   };
 
+  // Main component structure
   return (
     <>
       <MyQuizGame.Provider value={contextValue}>
-        <div className="App" style={backgroundImageStyle}>
+        <div className={`App ${Light ? "light-theme" : "dark-theme"}`} style={backgroundImageStyle}>
+          {/* Header section with logo and mode switch */}
           <div className="header">
             <p className="logo">Quizzy</p>
             {/* Replacing the button with image element for light mode */}
@@ -62,8 +70,8 @@ function App() {
               className="mode-icon"
             />
           </div>
-          {/* Using Ternary operator for the rendering of components */}
-          {questionNumber < 10 ? <QuestionBox /> : <Result />}
+          {/* Conditional rendering of QuestionBox or Result component based on questionNumber */}
+          {questionNumber < 10 ? <QuestionBox Light={Light} /> : <Result Light={Light} />}
         </div>
       </MyQuizGame.Provider>
     </>

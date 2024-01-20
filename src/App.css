@@ -1,91 +1,102 @@
 @import url("https://fonts.googleapis.com/css2?family=Caveat+Brush&family=Caveat:wght@700&family=Pacifico&family=Poppins&family=Satisfy&display=swap");
 @import url('https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Poppins&family=Reem+Kufi+Fun:wght@600&family=Roboto:wght@500&display=swap');
+
+/* Resetting default styles for the body */
 body {
   margin: 0;
   padding: 0;
   overflow: auto;
 }
 
+/* Header styles */
 .header {
   display: flex;
   text-align: center;
   justify-content: space-between;
 }
 
-/* Button style for changing the mode */
-.mode-icon{
-    margin-top: 5px;
-    height: 70px;
-    width: 70px;
-    margin-right: 7px
+/* Mode icon styles */
+.mode-icon {
+  margin-top: 20px;
+  height: 70px;
+  width: 70px;
+  margin-right: 7px;
 }
 
-.logo{
-    color: #bf2c2c;
-    font-family: "Alfa Slab One";
-    font-size: 79px;
-    font-style: normal;
-    font-weight: 300;
-    line-height: normal;
-    margin-bottom: 30px;
-    margin-top: 3px;
-    margin-left: 7px;
+/* Logo styles */
+.logo {
+  color: #FF9130;
+  font-family: "Alfa Slab One";
+  font-size: 79px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: normal;
+  margin-bottom: 30px;
+  margin-top: 3px;
+  margin-left: 7px;
 }
 
+/* Main App container styles */
 .App {
   text-align: center;
   padding: 10px;
   height: 100vh;
 }
 
-/* style for question box */
+/* Styles for question box */
 .question-box {
-    border-radius: 15px;
-    background: #B1D9DE;
-    width: 60vw;
-    height: 73vh;
-    margin-left: 18%;
-    padding: 10px;
-    box-shadow: 2px 2px;
-    padding-left: 30px;
-    padding-right: 30px;
-    background-color: B1D9DE;
+  border-radius: 15px;
+  background: #B1D9DE;
+  width: 60vw;
+  height: 73vh;
+  margin-left: 18%;
+  padding: 10px;
+  box-shadow: 2px 2px;
+  padding-left: 30px;
+  padding-right: 30px;
+  background-color: B1D9DE;
 }
 
+/* Question text styles */
 .question-text {
-    color: #000;
-    font-family: Poppins;
-    font-size: 42px;
-    font-style: normal;
-    font-weight: 700;
-    line-height: normal;
+  color: #7faaea;
+  font-family: Poppins;
+  font-size: 42px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
 }
 
+/* Options styles */
 .options {
-    border-radius: 20px;
-    background: #c1bcbc;
-    color: #000;
-    font-family: "Reem Kufi Fun";
-    font-size: 34px;
-    font-style: normal;
-    font-weight: 600;
-    line-height: normal;
+  border-radius: 20px;
+  background: #928d8d;
+  color: #000;
+  font-family: "Reem Kufi Fun";
+  font-size: 34px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
 }
 
+/* Hover effect for options */
 .options:hover {
-  background-color: rgb(160, 213, 170);
-  box-shadow: 1px 1px;
+  background-color: rgb(202, 160, 213);
+  box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.2);
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
 }
 
-.question-counter{
-    color: rgba(0, 0, 0, 0.60);
-    font-family: Poppins;
-    font-size: 28px;
-    font-style: normal;
-    font-weight: 600;
-    line-height: normal;
+/* Question counter styles */
+.question-counter {
+  color: rgba(0, 0, 0, 0.60);
+  font-family: Poppins;
+  font-size: 28px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
 }
-/* Button styles */
+
+/* General button styles */
 button {
   font-size: 15px;
   padding: 10px;
@@ -93,30 +104,29 @@ button {
   cursor: pointer;
 }
 
+/* Highlight button styles */
 .highlight {
-    color: #000;
-    font-family: "Reem Kufi Fun";
-    font-size: 20px;
-    font-style: normal;
-    font-weight: 600;
-    line-height: normal;
+  color: #000;
+  font-family: "Reem Kufi Fun";
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
 }
 
+/* Remove class styles */
 .remove {
   margin-left: 40px;
 }
 
-.score {
-  font-size: 30px;
-}
-
+/* Final score styles */
 .final-score {
   font-size: 40px;
   margin-top: 60px;
   color: rgb(9, 65, 170);
 }
 
-/* style for result */
+/* Result styles */
 .results {
   border: 1px solid rgb(148, 148, 148);
   border-radius: 10px;
@@ -128,13 +138,78 @@ button {
   box-shadow: 2px 2px;
   padding-left: 30px;
   padding-right: 30px;
-  background-color: rgb(69, 208, 255);
+  background-color: #B1D9DE;
 }
 
-.score{
-    font-size: 40px;
+/* Greeting styles */
+.greeting {
+  color: rgb(0, 0, 0);
+  text-align: center;
+  font-size: large;
+  font-family: "Reem Kufi Fun";
 }
 
+/* Score styles */
+.score {
+  color: #000000;
+  font-family: "Reem Kufi Fun";
+  font-size: 30px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+}
+
+/* Divider styles */
+hr {
+  height: 6px;
+  background-color: rgb(0, 0, 0);
+  border-radius: 8px;
+}
+
+/* Restart button styles */
 .restart-btn {
-  background-color: rgb(255, 215, 255);
+  font-size: larger;
+  height: 50px;
+  width: 200px;
+  border-radius: 40px;
+  background: #A3B763;
+}
+
+/* Dark theme specific styles */
+.dark-theme .results {
+  background-color: #31304D;
+}
+
+.dark-theme .final-score,
+.dark-theme .score,
+.dark-theme .greeting {
+  color: white;
+}
+
+.dark-theme .divider {
+  background-color: white;
+}
+
+/* Dark theme specific styles for question box */
+.question-box.dark-theme {
+  background-color: #31304D;
+  color: #ffffff;
+}
+
+/* Dark theme specific styles for options */
+.options.dark-option {
+  color: white;
+  background-color: #553e3e;
+}
+
+/* Dark theme specific hover effect for options */
+.options.dark-option:hover {
+  background-color: rgb(23, 46, 27);
+  box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.2);
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Dark theme specific styles for logo in the App component */
+.App.dark-theme .logo {
+  color: #BCD13C; /* Dark theme text color */
 }
